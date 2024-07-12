@@ -1,0 +1,177 @@
+.covid {
+     padding-bottom: 20px;
+     border: 1px solid $boder-color;
+     width: 100%;
+     &-take {
+          position: relative;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          padding-bottom: 10px;
+          border-bottom: 1px solid $boder-color;
+          &-item {
+               font-size: 14px;
+               padding: 5px;
+               border: 1px solid $hover2-color;
+               border-radius: 3px;
+               margin: 0 10px;
+          }
+     }
+     &-statistics {
+          padding: 15px;
+          &-item {
+               position: relative;
+               display: flex;
+               justify-content: space-between;
+               margin-top: 30px;
+               &-right {
+                    width: 52%;
+                    padding-left: 20px;
+                    border-left: 1px solid $boder-color;
+                    position: relative;
+                    &::before {
+                         position: absolute;
+                         content: '';
+                         border: solid #bdbdbd;
+                         background-color: white;
+                         border-width:0 1px 1px 0;
+                         padding: 6px;
+                         transform: rotate(135deg);
+                         left: -7px;
+                         top: 40px;
+                    }
+                    & .wrap {
+                         max-height: 110px;
+                         overflow-y: scroll;
+                         &::-webkit-scrollbar {
+                              width: 2px;
+                              height: 10px;
+                         }
+                         &::-webkit-scrollbar-track {
+                              background: white;
+                         }
+                         &::-webkit-scrollbar-thumb {
+                              background-color: $primary-color;
+                         }
+                    }
+               }
+          }
+     }
+     .swiper-slide {
+          margin-right: 0 !important;
+          width: auto !important;
+     }
+     .swiper-button-prev {
+          display: none;
+     }
+     .swiper-button-next {
+          color: $primary-color !important;
+          right: -7px;
+          &::after {
+               font-size: 20px;
+          }
+     }
+}
+.sick {
+     border: 1px solid $boder-color;
+     padding: 10px 10px;
+     display: flex;
+     align-items: center;
+     &-item {
+          justify-content: center;
+          display: flex;
+          padding: 10px 5px;
+          font-size: 14px;
+          & img {
+               width: 18px;
+          }
+          &.has-bg {
+               background-color: rgba(14,151,198,0.1);
+          }
+     }
+}
+.swiper-sick {
+     width: 398px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     & .swiper-slide {
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          & a {
+               width: 320px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               font-size: 14px;
+               color: #087CCE;
+               text-decoration: underline !important;
+          }
+     }
+}
+.thead, .tbody{
+     display: flex;
+     align-items: center;
+}
+.thead-item {
+     width: 100px;
+     margin-bottom: 10px;
+}
+.tbody-item {
+     font-size: 14px;
+     width: 100px;
+     margin-bottom: 10px;
+}
+.txt-label {
+     font-weight: bold;
+     font-size: 14px;
+}
+.count-head {
+     color: $primary-color;
+     font-size: 14px;
+}
+.count-day {
+     color: #FF392B;
+}
+.count-all {
+     color: #F3585B;
+}
+.count-khoi-day {
+     color: #00945E;
+}
+.count-khoi-all {
+     color: rgba(0,148,94,0.8);
+}
+.count-tuvong-day {
+     color: #222222;
+}
+.count-tuvong-all {
+     color: $primary-color;
+}
+.thongtinthem {
+     margin: 10px 0;
+     padding: 0 20px;
+     color: $primary-color;
+     font-size: 14px;
+     display: flex;
+     & a {
+          color: #076DB6 !important;
+          text-decoration: underline !important;
+     }
+     & a {
+          margin-left: auto;
+     }
+     & .xemthem {
+          margin-left: 15px !important;
+     }
+}
+//Button xem thêm
+.more {
+     color: white;
+     background-color: #076DB6;
+     padding: 5px 10px;
+     margin: 0 10px;
+     border-radius: 3px;
+     font-size: 14px;
+}

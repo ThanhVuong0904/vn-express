@@ -1,0 +1,79 @@
+.common {
+     &-header {
+          margin-bottom: 20px;
+          &-link {
+               margin-left: 18px;
+               font-size: 14px;
+               color: $primary-color;
+               &:hover {
+                    color: $hover2-color;
+               }
+          }
+     }
+     &-heading {
+          font-size: 18px;
+          border-bottom: 1px solid $hover-color;
+          &:hover {
+               color: $hover2-color;
+               border-bottom: 1px solid $hover2-color;
+          }
+     }
+     &-news {
+          width: 49.092%;
+          padding-right: 20px;
+          border-right: 1px solid $boder-color;
+     }
+     &-sub {
+          width: 25.455%;
+          padding: 0 20px;
+          border-right: 1px solid $boder-color;
+          &-item:first-child {
+               margin-bottom: 20px;
+               padding-bottom: 20px;
+               border-bottom: 1px solid $boder-color;
+          }
+          &-link {
+               display: block;
+               font-size: 15px;
+               font-weight: 600;
+               margin: 10px 0;
+               &:hover {
+                    transition: all 0.2s linear;
+                    color: $hover2-color;
+               }
+          }
+     }
+     &-more {
+          padding-left: 20px;
+          width: 25.453%;
+          &-item:not(:last-child) {
+               padding-bottom: 20px;
+               margin-bottom: 20px;
+               border-bottom: 1px solid $boder-color;
+          }
+          &-link {
+               font-size: 15px;
+               font-weight: 600;
+               &:hover {
+                    transition: all 0.2s linear;
+                    color: $hover2-color;
+               }
+          }
+          & img {
+               width: 100px;
+               object-fit: cover;
+          }
+     }
+     &-title {
+          margin: 15px 0;
+          font-size: 24px;
+          font-weight: 500;
+          &:hover {
+               transition: all 0.2s linear;
+               color: $hover2-color;
+          }
+     }
+     &-desc {
+          font-size: 15px;
+     }
+}

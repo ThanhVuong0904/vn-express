@@ -1,0 +1,93 @@
+.news-item {
+     margin-bottom: 20px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid $boder-color;
+     h3 {
+          font-size: 15px;
+          cursor: pointer;
+          &:hover {
+               color: $hover2-color;
+          }
+     }
+     &-content {
+          margin-top: 15px;
+     }
+     &-image {
+          width: 150px;
+          position: relative;
+          float: left;
+          margin-right: 15px;
+     }
+     &-text {
+          display: inline;
+          // flex: 1;
+          & p {
+               font-size: 14px;
+               line-height: 1.5rem;
+          }
+          & .comment {
+               margin-left: 5px;
+               display: inline;
+               position: relative;
+               & img {
+                    position: absolute;
+                    // right: 0;
+                    top: 3px;
+                    display: inline;
+               }
+               & span {
+                    margin-left: 18px;
+               }
+          }
+     }
+}
+.news-item-with-header {
+     .item {
+          position: relative;
+          &:not(:last-child)::before {
+               content: '';
+               position: absolute;
+               width: 1px;
+               height: 100%;
+               background-color: $boder-color;
+               right: -20px;
+          }
+     }
+     .header {
+          padding-bottom: 10px;
+          margin-bottom: 15px;
+          &-title {
+               font-size: 18px;
+               border-bottom: 1px solid $hover-color;
+               &:hover {
+                    color: $hover2-color;
+                    border-bottom: 1px solid $hover2-color;
+               }
+          }
+          &-link {
+               font-size: 14px;
+               color: $primary-color;
+               margin-left: 15px;
+               &:hover {
+                    color: $hover2-color;
+               }
+          }
+     }
+     .title {
+          margin: 10px 0;
+          display: block;
+          font-weight: 700;
+          &:hover {
+               color: $hover2-color;
+          }
+     }
+     .desc {
+          cursor: pointer;
+          font-size: 14px;
+     }
+     .news-content {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid $boder-color;
+     }
+}

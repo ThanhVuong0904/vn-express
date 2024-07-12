@@ -1,0 +1,45 @@
+.businessinfor {
+     background-color: #f7f7f7;
+     padding: 15px 15px 50px 15px;
+     .swiper {
+          display: flex;
+          flex-direction: column-reverse;
+     }
+     .swiper-button-next {
+          right: -1px;
+          top: 12px;
+          &::after {
+               font-size: 20px;
+          }
+     }
+     .swiper-button-prev {
+          right: 22px;
+          left: unset;
+          top: 12px;
+          &::after {
+               font-size: 20px;
+          }
+     }
+     & h3 {
+          display: inline-block;
+          font-size: 14px;
+          border-bottom: 1px solid $hover-color;
+     }
+     &-item {
+          margin-top: 20px;
+          margin-right: 20px;
+          max-width: 260px;
+          & img {
+               margin-bottom: 15px;
+          }
+          & a {
+               font-size: 14px;
+               &:hover {
+                    color: $hover2-color;
+               }
+          }
+     }
+     &-list {
+          display: flex;
+     }
+}

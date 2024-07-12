@@ -1,0 +1,136 @@
+.nav {
+     position: sticky;
+     top: 0;
+     z-index: 999;
+     padding: 10px 0;
+     border-bottom: 1px solid $boder-color;
+     background-color: white;
+     transition: all 0.2s linear;
+     .newest {
+          display: none;
+          padding-right: 10px;
+          border-right: 1px solid $boder-color;
+          & img {
+               width: 20px;
+               margin-right: 5px;
+          }
+          & a {
+               font-size: 14px;
+               color: $hover-color;
+               font-weight: 700;
+          }
+          &.active {
+               display: flex;
+          }
+     }
+     &.shrink {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+     & nav {
+          max-width: 1370px;
+          padding: 0 15px;
+          margin: auto;
+     }
+     &-main {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &-link {
+               color: $second-color;
+               font-weight: 600;
+               font-size: 14px;
+          }
+          &-item:hover &-link {
+               transition: all 0.2s linear;
+               color: $hover-color;
+          }
+          &-item:hover {
+               .nav-sub {
+                    display: flex;
+                    animation: fadeIn 0.2s ease-in-out;
+               }
+          }
+          &-item::before {
+               position: absolute;
+               content: "";
+               display: block;
+               top: 20px;
+               height: 100%;
+               width: 100%;
+          }
+     }
+     .home-logo {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100%;
+          background-color: $boder-color;
+          padding: 5px;
+          transition: all 0.2s linear;
+          & svg {
+               width: 15px;
+               height: 15px;
+          }
+          &:hover {
+               background-color: $hover-color;
+          }
+          &:hover svg path {
+               fill: white;
+          }
+          &.none {
+               display: none;
+          }
+     }
+     &-all {
+          display: flex;
+          align-items: center;
+          color: #bdbdbd;
+          font-weight: normal;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          &:hover {
+               color: $hover-color;
+          }
+          &:hover svg path{
+               fill: $hover-color;
+               transition: all 0.2s linear;
+          }
+     }
+     &-sub {
+          padding:0 10px;
+          width: 190px;
+          position: absolute;
+          top: 35px;
+          display: none;
+          flex-direction: column;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          border-top: 1px solid $hover-color;
+          background-color: white;
+          z-index: 99;
+          & li:nth-child(1) {
+               padding-top: 10px;
+          }
+          & li {
+               margin-bottom: 20px;
+          }
+          & li a {
+               color: #333  !important;
+               font-weight:  normal !important;
+               &:hover {
+                    text-decoration: underline;  
+               }
+          }
+     }
+}
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}

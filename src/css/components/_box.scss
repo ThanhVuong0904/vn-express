@@ -1,0 +1,146 @@
+.box{
+     margin-top: 20px;
+     &-content {
+          display: flex;
+          margin-top: 20px;
+          justify-content: space-between;
+     }
+     &-header {
+          display: flex;
+          align-items: center;
+          // justify-content: space-between;
+          cursor: pointer;
+          font-size: 13px;
+          transition: all 0.2s linear;
+          & h2 {
+               font-size: 18px;
+               padding-bottom: 5px;
+               border-bottom: 1px solid $hover-color;
+               &:hover {
+                    color: $hover2-color;
+               }
+          }
+          & p {
+               margin-left: 10px;
+               &:hover {
+                    color: $hover2-color;
+               }
+          }
+     }
+     &-left {
+          display: flex;
+          width: 67.648%;;
+     }
+     &-right {
+          flex: 1;
+          padding-left: 15px;
+          border-left: 1px solid $boder-color;
+     }
+     &-image {
+          width: 225px;
+     }
+     &-news {
+          cursor: pointer;
+          & h3 {
+               font-size: 15px;
+               &:hover {
+                    color: $hover2-color;
+                    transition: all 0.2s linear;
+               }
+          }
+          & p {
+               margin-top: 15px;
+               font-size: 14px;
+          }
+          flex: 1;
+          padding: 0 10px;
+     }
+     &-sub {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          &-list {
+               padding-left: 20px;
+               & li {
+                    max-width: 200px;
+                    width: 100%;
+                    position: relative;
+                    &::before {
+                         content: "";
+                         background-color: $primary-color;
+                         border-radius: 100%;
+                         width: 6px;
+                         height: 6px;
+                         position: absolute;
+                         top: 4px;
+                         left: -17px;
+                    }
+                    & a {
+                         font-weight: 700;
+                         font-size: 14px;
+                    }
+               }
+          }
+     }
+     &-more {
+          &-item {
+               display: flex;
+               justify-content: space-between;
+          }
+          &-image {
+               max-width: 280px;
+               margin-right: 10px;
+          }
+          &-table {
+               margin-right: 10px;
+          }
+          table {
+               border-collapse: collapse;
+          }
+          table, th, td {
+               border: 1px solid $boder-color;
+               font-size: 12px;
+               height: 100%;
+               padding: 5px;
+          }
+          &-brand {
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+          }
+     }
+     &-sport {
+          .swiper-button-next {
+               right: -1px;
+               &::after {
+                    font-size: 20px;
+               }
+          }
+          .swiper-button-prev {
+               &::after {
+                    font-size: 20px;
+               }
+          }
+          display: flex;
+          border: 1px solid $boder-color;
+          &-item {
+               border-right: 1px solid $boder-color;
+          }
+          & img {
+               width: 12px;
+               margin-right: 5px;
+          }
+          &-time {
+               font-size: 12px;
+               color: $primary-color;
+               margin-bottom: 10px;
+          }
+          &-name {
+               font-size: 14px;
+          }
+     }
+}
+
+.wrap-match {
+     padding: 10px;
+}

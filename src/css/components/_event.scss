@@ -1,0 +1,46 @@
+.event {
+     margin-bottom: 20px;
+     position: relative;
+     h4 {
+          font-size: 14px;
+          color: $primary-color;
+          border-bottom: 1px solid $hover-color;
+     }
+     background-color: #f7f7f7;
+     padding: 15px;
+     &-list {
+          margin-top: 20px;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+     }
+     &-item {
+          text-align: start;
+          & img {
+               max-width: 100px;
+               margin-right: 10px;
+          }
+          flex: 1;
+          & a {
+               font-size: 14px;
+          }
+     }
+     .swiper {
+          display: flex;
+          flex-direction: column-reverse;
+     }
+     .swiper-button-next {
+          right: -1px;
+          top: 12px;
+          &::after {
+               font-size: 20px;
+          }
+     }
+     .swiper-button-prev {
+          right: 22px;
+          left: unset;
+          top: 12px;
+          &::after {
+               font-size: 20px;
+          }
+     }
+}

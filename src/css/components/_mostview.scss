@@ -1,0 +1,42 @@
+.mostview {
+     &-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+     }
+     & h3 {
+          padding-bottom: 10px;
+          border-bottom: 1px solid $boder-color;
+          position: relative;
+          &::before {
+               position: absolute;
+               content: '';
+               background-color: $hover-color;
+               width: 100px;
+               height: 1px;
+               left: 0;
+               bottom: 0;
+          }
+     }
+     &-link:hover {
+          color: $hover2-color;
+          transition: all 0.2s linear;
+     }
+     &-item {
+          border-bottom: 1px solid $boder-color;
+          & h1 {
+               font-size: 48px;
+               margin-right: 15px;
+          }
+          & a {
+               font-size: 14px;
+          }
+          padding: 20px 0;
+     }
+     &-item:nth-child(1), &-item:nth-child(3), &-item:nth-child(5), &-item:nth-child(7) {
+          border-right: 1px solid $boder-color;
+          padding-right: 20px;
+     }
+     &-item:nth-child(2), &-item:nth-child(4), &-item:nth-child(6),&-item:nth-child(8) {
+          padding-left: 20px;
+     }
+}

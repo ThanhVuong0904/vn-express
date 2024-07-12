@@ -1,0 +1,12 @@
+.sroll-top {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     border: 1px solid $boder-color;
+     cursor: pointer;
+     padding: 8px;
+     &:hover {
+          background-color: #f7f7f7;
+     }
+     z-index: 99;
+}
